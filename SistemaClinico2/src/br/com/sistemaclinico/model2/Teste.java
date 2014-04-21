@@ -3,6 +3,8 @@ package br.com.sistemaclinico.model2;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import br.com.sistemaclinico.interacao.InfFuncionario;
+
 //@Desenvolvido por Joao Cleber
 
 
@@ -22,7 +24,8 @@ public class Teste {
 			try{
 			
 				m.Menu();
-				Funcionario fc = new Funcionario();
+				//Funcionario fc = new Funcionario();
+				InfFuncionario info = new InfFuncionario();
 				
 			
 				
@@ -32,18 +35,18 @@ public class Teste {
 				do {
 					if(opcao == 1){
 						
-							fc.CadastrarFuncionario();
+							info.CadastrarFuncionario();
 					
 					}if(opcao == 2){
 							
-						fc.ListarFuncionario();	
+						info.ListarFuncionario();	
 					}if (opcao == 3){
 						System.out.println("Digite o nome a ser removido :");
 						String nome = sc.next();
-						fc.ExcluirFuncionario(nome);
+						info.ExcluirFuncionario(nome);
 						
 					}if (opcao == 4){
-						fc.AlterarFuncionario();
+						info.AlterarFuncionario();
 						
 					}
 					

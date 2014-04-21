@@ -1,52 +1,28 @@
-package br.com.sistemaclinico.model2;
+package br.com.sistemaclinico.interacao;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import javax.swing.JOptionPane;
+import br.com.sistemaclinico.model2.Funcionario;
 
-import br.com.sismaclinico.interfaces.CadastrarFuncionario;
-
-//@Desenvolvido por Joao Cleber
-
-public class Funcionario extends Pessoa {
+public class InfFuncionario extends Funcionario  {
+	String nome, cpf, rg;
 	
-	public int matricula;
-	protected String cargo;
-	
-	
-	public String getCargo() {
-		return cargo;
-	}
-	public void setCargo(String cargo) {
-		this.cargo = cargo;
-	}
-	public long getMatricula() {
-		return matricula;
-	}
-	public void setMatricula(int matricula) {
-		this.matricula = matricula;
-		// TODO Auto-generated method stub
-		
-	}
-
-	
-	/*Scanner sc = new Scanner(System.in);
+	Scanner sc = new Scanner(System.in);
 	ArrayList<Funcionario> fun = new ArrayList<>();
 	
 	//Contrutor
-	public Funcionario (){
+	public void Funcionario (){
 		
 	}
 	//Construtor
-	Funcionario(String nome, String cpf, String rg, String matricula, String cargo){
+	void Funcionario(String nome, String cpf, String rg, String matricula, String cargo){
 		this.nome = nome;
 		this.cpf = cpf;
 		this.rg = rg;
 		this.cargo = cargo;	
 	}
 
-	@Override
 	public void CadastrarFuncionario() {
 		Funcionario f = new Funcionario();
 		System.out.println("Digite o nome do Funcioanrio ");
@@ -115,12 +91,6 @@ public class Funcionario extends Pessoa {
 			}
 			
 		}		
-	*///}
-	
+	}
+
 }
-	
-
-	
-	
-	
-

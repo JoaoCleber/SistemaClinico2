@@ -1,5 +1,6 @@
 package br.com.sistemaclinico.util;
 
+import java.sql.Connection;
 import java.beans.Statement;
 import java.sql.*;
 
@@ -8,22 +9,32 @@ public class ConnectionFactory {
 	public Statement stm;//resposavel por preparar e realizar pesquisa no bd
 	public ResultSet re;//responsavel por armazenar o resultado de uma pesquisa
 	private String driver = "org.postgresql.Driver";
-	private String caminho = "jdbc.postgresql://localhost:5433/sistemaclinico";
-	private String usuario = "postgres";
-	private String senha = "adm";
-	public Connection con;
+	private static String caminho = "jdbc.postgresql://localhost:5433/sistemaclinico";
+	private static String usuario = "postgres";
+	private static String senha = "adm";
+	public static Connection con;
 	
-	public void conexao() throws ClassNotFoundException{
+	
+	
+public static Connection getConnection() throws ClassNotFoundException{
 		
-		try {
+		try{
+			
+			
 			Class.forName("org.postgresql.Driver");
-			con = DriverManager.getConnection(caminho, usuario, senha);
-			System.out.println("Conectado");
-		} catch (SQLException e) {
-			System.out.println("Erros");
+			Connection con = DriverManager.getConnection(caminho, usuario, senha);
+			
+			return con;
+			
+		}catch(Exception e){
 			e.printStackTrace();
+			return null;
 		}
+		
+		
 	}
+
+	
 	public void desconecta(){
 		try {
 			con.close();
@@ -36,9 +47,6 @@ public class ConnectionFactory {
 			e.printStackTrace();
 		}
 	}
-	public static Connection getConnection() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
 
 }

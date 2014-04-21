@@ -13,7 +13,7 @@ public class Teste {
 	public static void main(String[] args) throws SQLException, ClassNotFoundException {
 		
 		ConnectionFactory cone = new ConnectionFactory();
-		cone.conexao();
+		cone.getConnection();
 		
 		
 }
