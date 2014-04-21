@@ -76,7 +76,7 @@ public class Paciente extends Pessoa implements CadastrarPaciente {
 
 	@Override
 	public void AlterarPaciente() {
-		System.out.println("Digite o nome do Paciente a ser Alterado");
+		System.out.println("Digite o nome do Paciente a ser Alterado!!!");
 		String nome = sc.next();
 		System.out.println("Digite o novo nome");
 		String novoNome = sc.next();
