@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import br.com.sistemaclinico.model2.Funcionario;
 
-public class InfFuncionario extends Funcionario  {
+public class InfoFuncionario extends Funcionario  {
 	String nome, cpf, rg;
 	
 	Scanner sc = new Scanner(System.in);

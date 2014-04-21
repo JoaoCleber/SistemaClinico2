@@ -3,7 +3,7 @@ package br.com.sistemaclinico.model2;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import br.com.sistemaclinico.interacao.InfFuncionario;
+import br.com.sistemaclinico.interacao.InfoFuncionario;
 
 //@Desenvolvido por Joao Cleber
 
@@ -24,10 +24,8 @@ public class Teste {
 			try{
 			
 				m.Menu();
-				//Funcionario fc = new Funcionario();
-				InfFuncionario info = new InfFuncionario();
+				InfoFuncionario info = new InfoFuncionario();
 				
-			
 				
 				System.out.println("Digite Sua Opcao :");
 				opcao = sc.nextInt();

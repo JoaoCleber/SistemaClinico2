@@ -2,7 +2,9 @@ package br.com.sistemaclinico.model2;
 //@Desenvolvido por joao cleber
 public class Pessoa {
 	
-	String nome, cpf, rg;
+	protected String nome;
+	protected String cpf;
+	protected String rg;
 	
 
 
